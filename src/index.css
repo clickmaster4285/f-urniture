@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 6% 5%;
+    --foreground: 36 33% 93%;
+
+    --card: 30 6% 8%;
+    --card-foreground: 36 33% 93%;
+
+    --popover: 30 6% 8%;
+    --popover-foreground: 36 33% 93%;
+
+    --primary: 36 40% 60%;
+    --primary-foreground: 30 6% 5%;
+
+    --secondary: 30 6% 12%;
+    --secondary-foreground: 36 33% 93%;
+
+    --muted: 30 6% 15%;
+    --muted-foreground: 36 10% 55%;
+
+    --accent: 36 40% 60%;
+    --accent-foreground: 30 6% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 6% 18%;
+    --input: 30 6% 18%;
+    --ring: 36 40% 60%;
+
+    --radius: 0.5rem;
+
+    --gold: 36 40% 60%;
+    --gold-foreground: 30 6% 5%;
+    --cream: 36 33% 93%;
+    --charcoal: 30 6% 5%;
+    --charcoal-light: 30 6% 10%;
+
+    --sidebar-background: 30 6% 8%;
+    --sidebar-foreground: 36 33% 93%;
+    --sidebar-primary: 36 40% 60%;
+    --sidebar-primary-foreground: 30 6% 5%;
+    --sidebar-accent: 30 6% 12%;
+    --sidebar-accent-foreground: 36 33% 93%;
+    --sidebar-border: 30 6% 18%;
+    --sidebar-ring: 36 40% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
